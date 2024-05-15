@@ -1,5 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 @use './src/styles/defaults' as *;
+/*** CARBON START ****/
+
+@use '@carbon/styles/scss/config' with (
+  $font-path: '~@ibm/plex',
+  $flex-grid-columns: 16,
+  $use-flexbox-grid: true,
+);
+@use '@carbon/themes/scss/themes' as t;
+@use '@carbon/styles';
+@use '@carbon/themes';
+// :root {
+//   @include themes.theme(t.$g90);
+// }
+
+/*** CARBON START ****/
 
 // Angular2-Tree Component
 @import '@circlon/angular-tree-component/css/angular-tree-component.css';
@@ -162,12 +177,6 @@ tags-input .tags {
 
 .disabled {
   pointer-events: none;
-}
-
-a {
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 .clickable,
